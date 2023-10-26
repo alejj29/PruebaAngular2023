@@ -5,31 +5,32 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { NavbarComponent } from './navbar/navbar.component';
 import { Pagina1Component } from './pagina1/pagina1.component';
 import { Pagina2Component } from './pagina2/pagina2.component';
-import { NgxMaskDirective,NgxMaskPipe, IConfig, provideNgxMask } from 'ngx-mask'
+import { NgxMaskDirective, NgxMaskPipe, IConfig, provideNgxMask } from 'ngx-mask';
 
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
 
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatCardModule} from '@angular/material/card';
-import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { ConfirmarDialogoComponent } from './confirmarDialogo/confirmarDialogo.component';
 
-import {FormsModule} from '@angular/forms';
-
-
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
-  declarations: [				
+  declarations: [
     AppComponent,
     NavbarComponent,
-      Pagina1Component,
-      Pagina2Component
-   ],
+    Pagina1Component,
+    Pagina2Component,
+    ConfirmarDialogoComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -42,11 +43,12 @@ import {FormsModule} from '@angular/forms';
     MatCardModule,
     MatInputModule,
     NgxMaskDirective, NgxMaskPipe,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [provideNgxMask()],
   bootstrap: [AppComponent],
-  
 })
-export class AppModule { }
+export class AppModule {
+}
 

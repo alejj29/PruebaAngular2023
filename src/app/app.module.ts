@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms';
 import { ConfirmarDialogoComponent } from './confirmarDialogo/confirmarDialogo.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
+import { IgxGridModule} from "igniteui-angular";
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatInputModule,
     NgxMaskDirective, NgxMaskPipe,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    IgxGridModule
   ],
   providers: [provideNgxMask()],
   bootstrap: [AppComponent],

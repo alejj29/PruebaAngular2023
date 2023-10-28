@@ -1,3 +1,48 @@
-<p>
-  pagina2 works!
-</p>
+<div class="grid__wrapper">
+  <igx-grid
+    
+    #grid
+    [data]="data"
+    [primaryKey]="'ProductID'"
+    width="100%"
+    height="500px"
+    (keydown)="keydownHandler($event)"
+    (activeNodeChange)="activeNodeChange()"
+  >
+    <igx-column
+      field="ProductID"
+      header="Product ID"
+      [editable]="true"
+      [groupable]="true"
+      [hidden]="true"
+    ></igx-column>
+    <igx-column
+      field="ProductName"
+      header="Nombre Producto"
+      [groupable]="true"
+      [dataType]="'string'"
+      [editable]="true"
+    ></igx-column>
+    <igx-column
+      field="UnitPrice"
+      header="Precio Unitario"
+      [groupable]="true"
+      [dataType]="'string'"
+      [editable]="true"
+    ></igx-column>
+    <igx-column
+      field="QuantityPerUnit"
+      header="Cantidad por unidad"
+      [groupable]="true"
+      [dataType]="'string'"
+      [editable]="true"
+    ></igx-column>
+    <igx-column
+      field="ReorderLevel"
+      header="Reordenar Nivel"
+      dataType="number"
+      [groupable]="true"
+      [editable]="true"
+    ></igx-column>
+  </igx-grid>
+</div>
